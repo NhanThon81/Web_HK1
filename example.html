@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "menu"
+          "promotion1"
+          "promotion2"
+          "gift"
+          "footer";
+        gap: 10px;
+      }
+
+      .container div.menu {
+        grid-area: menu;
+      }
+
+      .container div.promotion1 {
+        grid-area: promotion1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .container div.promotion2 {
+        grid-area: promotion2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .promotion1 img,
+      .promotion2 img {
+        width: 48%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .promotion-content {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .promotion-content h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+      }
+
+      .promotion-content p {
+        margin: 0 0 10px;
+        font-size: 11px;
+        line-height: 1.4;
+      }
+
+      .container div.gift {
+        grid-area: gift;
+        width: 100%;
+      }
+
+      .container div.footer {
+        grid-area: footer;
+      }
+
+      #container_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      ul li {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      #container_left {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #left {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      #right {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      li.footer {
+        list-style-type: none;
+      }
+
+      .gift {
+        position: relative;
+        width: 100%;
+      }
+
+      .gift img {
+        width: 100%;
+        display: block;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        color: rgb(3, 0, 0);
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .content h2 {
+        margin: 0 0 5px;
+      }
+
+      .content p {
+        margin: 0 0 10px;
+      }
+
+      .btn {
+        background-color: rgb(19, 235, 91);
+        border: none;
+        padding: 7px 18px;
+        font-size: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="menu" id="container_menu">
+        <div>
+          <ul>
+            <li>Shop</li>
+            <li>Offer</li>
+            <li>Our Story</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+
+        <div>
+          <img src="../image/h.png" alt="" />
+        </div>
+
+        <div>
+          <input type="text" placeholder="Search...." />
+          <img src="../image/d.png" alt="" />
+          <img src="../image/c.png" alt="" />
+        </div>
+      </div>
+
+      <div class="promotion1">
+        <img src="../image/a.png" alt="" />
+
+        <div class="promotion-content">
+          <h3>Promotion title</h3>
+
+          <p>
+            A promotion title can refer to an advertising headline for a product
+            discount or a new job title earned through a career advancement.
+          </p>
+
+          <button class="btn">Shop Now</button>
+        </div>
+      </div>
+
+      <div class="promotion2">
+        <div class="promotion-content">
+          <h3>Promotion title</h3>
+
+          <p>
+            Another promotion title can refer to an advertising headline for a
+            product discount or a new job title earned through a career
+            advancement.
+          </p>
+
+          <button class="btn">Shop Now</button>
+        </div>
+
+        <img src="../image/f.png" alt="" />
+      </div>
+
+      <div class="gift">
+        <img src="../image/g.png" alt="Gift" />
+
+        <div class="content">
+          <h2>Gift for your skin</h2>
+
+          <p>
+            A gift title can refer to an advertising headline for a product
+            discount or a new job title earned through a career advancement.
+          </p>
+
+          <button class="btn">Shop Now</button>
+        </div>
+      </div>
+
+      <div class="footer" id="container_left">
+        <div class="left" id="left">
+          <div>
+            <h3>About Us</h3>
+            <ul>
+              <li>Shop</li>
+              <li>Offer</li>
+              <li>Our Story</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+
+          <div>2</div>
+          <div>3</div>
+        </div>
+
+        <div class="right" id="right">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
