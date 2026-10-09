@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 4 - Input</title>
+  </head>
+  <body>
+    <h2>Nhập nội dung</h2>
+
+    <input type="text" id="input" placeholder="Nhập nội dung" />
+
+    <button id="btn">Hiển thị</button>
+
+    <p id="result"></p>
+
+    <script>
+      const input = document.querySelector("#input");
+      const button = document.querySelector("#btn");
+      const result = document.querySelector("#result");
+
+      button.addEventListener("click", function () {
+        const value = input.value;
+
+        result.textContent = value;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 7 - Xóa Todo</title>
+  </head>
+  <body>
+    <h2>Danh sách công việc</h2>
+
+    <input type="text" id="input" placeholder="Nhập công việc" />
+
+    <button id="addBtn">Thêm</button>
+
+    <ul id="todo-list"></ul>
+
+    <script>
+      const input = document.querySelector("#input");
+      const addBtn = document.querySelector("#addBtn");
+      const list = document.querySelector("#todo-list");
+
+      addBtn.addEventListener("click", function () {
+        const value = input.value.trim();
+
+        if (value === "") {
+          return;
+        }
+
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+                ${value}
+                <button class="delete-btn">Xóa</button>
+            `;
+
+        list.appendChild(li);
+
+        input.value = "";
+      });
+
+      // Event Delegation
+      list.addEventListener("click", function (event) {
+        if (event.target.classList.contains("delete-btn")) {
+          const li = event.target.closest("li");
+
+          li.remove();
+        }
+      });
+    </script>
+  </body>
+</html>

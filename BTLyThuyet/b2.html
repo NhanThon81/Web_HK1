@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 2 - Ẩn hiện</title>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="text">Đây là nội dung có thể ẩn hoặc hiện</h2>
+
+    <button id="btn">Ẩn / Hiện</button>
+
+    <script>
+      const text = document.querySelector("#text");
+      const button = document.querySelector("#btn");
+
+      button.addEventListener("click", function () {
+        text.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 6 - Todo</title>
+  </head>
+  <body>
+    <h2>Danh sách công việc</h2>
+
+    <input type="text" id="input" placeholder="Nhập công việc" />
+
+    <button id="btn">Thêm</button>
+
+    <ul id="todo-list"></ul>
+
+    <script>
+      const input = document.querySelector("#input");
+      const button = document.querySelector("#btn");
+      const list = document.querySelector("#todo-list");
+
+      button.addEventListener("click", function () {
+        const value = input.value.trim();
+
+        if (value !== "") {
+          const newElement = document.createElement("li");
+
+          newElement.textContent = value;
+
+          list.appendChild(newElement);
+
+          input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

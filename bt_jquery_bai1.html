@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery - Bookstore Online</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 760px;
+        margin: 30px auto;
+        padding: 0 15px;
+      }
+      .book {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 8px 0;
+      }
+      .price {
+        color: #c0392b;
+        font-weight: bold;
+        margin: 4px 0;
+      }
+      .featured {
+        background: #fff3cd;
+        border-color: #f1c40f;
+      }
+      .selected {
+        background: #d6eaf8;
+      }
+      .added {
+        background: #27ae60;
+        color: #fff;
+      }
+      .error {
+        color: red;
+      }
+      button {
+        padding: 6px 12px;
+        cursor: pointer;
+        margin: 4px 2px;
+      }
+      input,
+      select {
+        padding: 6px;
+        margin: 4px 0;
+      }
+      #box {
+        width: 100px;
+        height: 100px;
+        background: #3498db;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Chào mừng đến Bookstore Online</h1>
+    <p class="note">Đây là một đoạn mô tả.</p>
+
+    <script>
+      $(function () {
+        console.log("jQuery phiên bản:", $.fn.jquery);
+        $("#title").css("color", "darkblue");
+        $(".note").text("Nội dung này đã bị jQuery thay đổi!");
+      });
+    </script>
+  </body>
+</html>

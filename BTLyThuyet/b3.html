@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 3 - Đếm click</title>
+  </head>
+  <body>
+    <h2>Đếm số lần click</h2>
+
+    <button id="btn">Click vào đây</button>
+
+    <p id="result">Số lần click: 0</p>
+
+    <script>
+      let count = 0;
+
+      const button = document.querySelector("#btn");
+      const result = document.querySelector("#result");
+
+      button.addEventListener("click", function () {
+        count++;
+
+        result.textContent = "Số lần click: " + count;
+      });
+    </script>
+  </body>
+</html>

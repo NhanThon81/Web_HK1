@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Máy tính</h2>
+    <button onclick="tinh('+')">Cộng</button>
+    <button onclick="tinh('-')">Trừ</button>
+    <button onclick="tinh('*')">Nhân</button>
+    <button onclick="tinh('/')">Chia</button>
+    <p id="ketqua"></p>
+    <script>
+      function tinh(phepTinh) {
+        let so1 = Number(prompt("Nhap so thu nhat: "));
+        let so2 = Number(prompt("Nhap so thu 2: "));
+        let ketqua;
+        if (phepTinh == "+") {
+          ketqua = so1 + so2;
+        } else if (phepTinh == "-") {
+          ketqua = so1 - so2;
+        } else if (phepTinh == "*") {
+          ketqua = so1 * so2;
+        } else if (phepTinh == "/") {
+          ketqua = so1 / so2;
+        }
+        document.getElementById("ketqua").innerHTML = "Ket qua: " + ketqua;
+      }
+    </script>
+  </body>
+</html>

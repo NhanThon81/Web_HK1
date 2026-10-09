@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 5 - Đổi màu nền</title>
+  </head>
+  <body>
+    <h2>Chọn màu nền</h2>
+
+    <button class="color-btn" data-color="red">Đỏ</button>
+    <button class="color-btn" data-color="blue">Xanh dương</button>
+    <button class="color-btn" data-color="green">Xanh lá</button>
+    <button class="color-btn" data-color="yellow">Vàng</button>
+
+    <script>
+      const buttons = document.querySelectorAll(".color-btn");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          const color = event.target.dataset.color;
+
+          document.body.style.backgroundColor = color;
+        });
+      });
+    </script>
+  </body>
+</html>

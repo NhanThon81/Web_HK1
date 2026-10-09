@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bài 1 - Đổi màu chữ</title>
+  </head>
+  <body>
+    <h2 id="text">Đây là dòng chữ cần đổi màu</h2>
+
+    <button id="btn">Đổi màu chữ</button>
+
+    <script>
+      const text = document.querySelector("#text");
+      const button = document.querySelector("#btn");
+
+      button.addEventListener("click", function () {
+        text.style.color = "red";
+      });
+    </script>
+  </body>
+</html>
